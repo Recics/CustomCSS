@@ -1,0 +1,634 @@
+/* Made by akiyn#0604 | Twitter: ohakiyn | Twitch: ohakiyn | Krunker IGN: akiyn */
+/* Made for Benitto | YouTube Content Creator */
+/* This CSS should not be shared with anyone except the owner's permission, or the designer's permission */
+
+#termsInfo:before {
+    content  : "CSS made by akiyn#0604";
+    color    : white;
+    font-size: 20px;
+}
+
+@import url(https://envykrunk.github.io/removal/removal.css);
+@font-face {
+    font-family: gamefont;
+    src        : url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2);
+}
+
+#curGameInfo::before {
+    visibility: visible;
+    content: "Benitto's Client"
+}
+
+.classCard {
+    color: white !important;
+    background: rgba(0,0,0,0.5);
+    font-size:0;
+}
+.classWeap {
+    font-size:0;
+    color: white !important;
+    text-shadow:-1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020, -3px -3px 0 #202020, 3px -3px 0 #202020, -3px 3px 0 #202020, 3px 3px 0 #202020;
+}
+.classHP,.classHP span,.classLvl {
+    color:white !important;
+    font-size: 0 !important;
+    transition-duration:0.3s;
+}
+.clsXPBarC {
+    background-color: #ffffff;
+}
+.classXPBar {
+    opacity:0;
+    transition-duration:0.3s;
+}
+.classCard,.classWeap {
+    font-size:0px;
+    transition-duration:0.3s;
+}
+.classImgC {
+    position:absolute;
+    right:30px;
+    top:50px;
+    filter:saturate(0);
+    transition-duration:0.3s;
+}
+.classCard:hover .classWeap,.classCard:hover .classHP,.classCard:hover .classLvl {
+    font-size:20px !important;
+}
+.classCard:hover {
+    background-color:#000000a6;
+    font-size:20px;
+}
+.classCard:hover .classImgC {
+    transform:scale(1);
+    filter:saturate(1);
+}
+.classCard:hover .classXPBar {
+    opacity:1;
+}
+
+#hudClassIcon {
+	position: absolute;
+	bottom: 3px;
+	right: -80px;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+#hudClassImg {
+	border-radius: 0;
+}
+
+#healthValueHolder {
+	position: fixed;
+	right: 20000px;
+	bottom: 20px;
+	background-color: transparent;
+	border-radius: 15px;
+}
+}
+
+#healthValue {
+    display: none;
+}
+#curGameInfo {
+	font-size:18px;
+	content:'Benitto Client';
+	color: #ffffff;
+}
+#maxHP {
+	display: none;
+}
+
+#healthBar {
+	position: absolute;
+	width: 300px;
+	display: flex;
+	direction: ltl;
+	align-items: center;
+	border-radius: 15px;
+	height: 30px;
+	bottom: 10px;
+	right: -400px;
+	background-color: transparent;
+}
+
+.healthBarSeg {
+	width: -webkit-fill-available;
+	margin-right: -1px;
+	background-color: transparent;
+}
+.healthBarSeg:last-child .hpBSeg {
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.healthBarSeg:first-child .hpBSeg {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.hpBSeg {
+	border-radius: 0px;
+	box-shadow: none; display: flex;
+}
+
+#challIcon {
+	transform: translateY(-12px);
+	filter: brightness(5);
+	margin-left: 12px;
+}
+
+
+#ammoDisplay {
+	position: absolute;
+   	bottom: 50px;
+	right: 1904px;
+	padding: 0px;
+	height: 10px;
+    	align-items: center;
+	width: 300px;
+	border-radius: 12px;
+	background-color: transparent;
+	background-image: linear-gradient(cyan,cyan)
+}
+
+#ammoDisplay[style*="background-size: 0%;"] {
+	background-size: 100% !important;
+}
+
+#ammoVal {
+	position: fixed;
+	bottom: -50px;
+	left: 320px;
+	font-size: 70px;
+	color: #fff;
+	text-shadow: 2px 2px 0px #000 !important;
+	text-align: center;
+	width: 110px;
+}
+
+#ammoMax {
+	display: none;
+}
+
+#ammoIcon {
+    display: none;
+}
+
+#reloadMsg {
+	visibility: hidden;
+	line-height: unset;
+}
+
+#reloadMsg::after {
+	content: '!';
+	position: fixed;
+	left: 51%;
+	transform: translate(-50%, 0);
+	bottom: 126px;
+	background-color: cyan !important;
+	width: 45px;
+	height: 45px;
+	color: #000;
+	font-size: 30px;
+	visibility: visible;
+	clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
+	line-height: 60px;
+}
+
+#reloadMsg::before {
+	content: '';
+	position: fixed;
+	left: 51%;
+	transform: translate(-50%, 0);
+	bottom: 122px;
+	background-color: #000;
+	width: 60px;
+	height: 65px;
+	visibility: visible;
+	clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
+}
+
+
+#weapDisplay {
+	position: fixed;
+	bottom: 50px;
+	left: 46.5%;
+	display: none !important;
+}
+
+.weapItem {
+	position: absolute;
+}
+
+.weapIcon {
+	filter: grayscale(1) brightness(2) drop-shadow(2px 0px 1px var(--accent));
+	opacity: 0 !important;
+	transition-duration: 0.25s;
+	height: 0;
+}
+
+.weapIcon[style*="1"] {
+	opacity: 1 !important;
+	height: 70px;
+}
+
+#weapIconMel {
+	margin: 0 !important;
+}
+
+.weapKey {
+	display: none;
+}
+
+.headShotChatIcon,
+.fistChatIcon,
+.weaponChatIcon,
+.thrownChatIcon,
+.meleeChatIcon {
+	filter: brightness(10) drop-shadow(0px 0px 2px cyan);
+}
+
+
+#chatList {
+    user-select: text !important;
+}
+
+.menuItem {
+    background: transparent !important;
+}
+
+.menuItemContainer {
+    background: transparent !important;
+}
+
+#customizeButton {
+    border-radius: 100px !important;
+}
+
+.button.small {
+    border-radius: 100px !important;
+}
+
+.headerBar {
+    background: transparent !important;
+}
+
+.menuClassPlayerName {
+    color: red;
+}
+
+#mLevelCont {
+    color: rgb(255, 0, 0);
+    background-color: transparent !important;
+}
+
+#chatList {
+	background-color: rgba(12, 12, 12, 0.185) !important;
+}
+
+#timerDisplay {
+	width: 240px!important;
+	height: px!important;
+	background-color: rgba(0, 0, 0, 0)!important;
+	will-change: unsetv;
+}
+#timerVal {
+	font-size: 50px!important;
+	padding-left: 0!important;
+	will-change: unset!important;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5)!important;
+}
+#teamScores {
+	position: fixed!important;
+	top: 0!important;
+	left: 50%!important;
+	transform: translateX(-50%)!important;
+	width: 685px!important;
+	height: 50px!important;
+	padding: 10px!important;
+	padding-left: 0!important;
+	padding-top: 0!important;
+	padding-right: 0!important;
+	padding-bottom: 0!important;
+	margin-left: 0!important;
+	margin-top: 0!important;
+	margin-right: 0!important;
+	margin-bottom: 0!important;
+	border-radius: 0!important;
+	background-color: transparent!important;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5)!important;
+}
+.tScore {
+	display: inline-block!important;
+}
+#tScoreV1 {
+	position: fixed!important;
+	left: -25%!important;
+	top: 4px!important;
+}
+#tScoreV2 {
+	position: fixed!important;
+	left: 25%!important;
+	top: 4px!important;
+}
+.tScoreT {
+	width: 100%!important;
+	margin-top: 20px!important;
+	text-align: center!important;
+	font-size: 24px!important;
+	color: #fff!important;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5)!important;
+	z-index: 2!important;
+}
+.tScoreM {
+	display: none!important;
+}
+.tScoreF {
+	left: 50%!important;
+	width: 100px!important;
+	height: 80px!important;
+	margin-left: 123px!important;
+	margin-right: 116px!important;
+	padding-left: 0!important;
+	padding-right: 0!important;
+	background-color: #eb5656!important;
+	color: transparent!important;
+	opacity: 50%!important;
+	z-index: 1!important;
+}
+.tScoreF.you {
+	background-color: #5699eb!important;
+	color: transparent!important;
+	opacity: 50%!important;
+	z-index: 1!important;
+}
+.tScoreC {
+	left: 50%!important;
+	width: 100px!important;
+	height: 80px!important;
+	margin-left: 123px!important;
+	margin-right: 116px!important;
+	background-color: red!important;
+	opacity: 50%!important;
+	z-index: 1!important;
+}
+.tScoreC.you {
+	background-color: #fff!important;
+	opacity: 50%!important;
+	z-index: 1!important;
+}
+
+#timerDisplay {
+    text-align: center;
+    position: fixed;
+    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    width: 150px;
+    height: 25px;
+    padding: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    will-change: unset;
+}
+#timerVal {
+    font-size: 28px;
+    padding-left: 0;
+    will-change: unset;
+}
+#timerIcon {
+    display: none;
+}
+#teamScores {
+    position: fixed;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 25px;
+    padding: 10px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+.tScore {
+    display: inline-block;
+}
+#tScoreV1 {
+    position: fixed;
+    left: -25%;
+    top: 4px;
+}
+#tScoreV2 {
+    position: fixed;
+    left: 25%;
+    top: 4px;
+}
+.tScoreT {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    z-index: 2;
+}
+.tScoreM {
+    display: none;
+}
+
+#gameMessage {
+    position: fixed!important;
+    top: 87px !important;
+	color: cyan;
+}
+
+#menuItemContainer {
+	background: rgba(0,0,0,0) !important
+}
+
+#endTable tbody tr th {
+    border-bottom: none;
+    font-size: 0 !important;
+}
+#endTable tbody tr th:first-child:after {
+    content: "R";
+    font-size: 20px;
+}
+#endTable tbody tr th:nth-child(2):after {
+    content:"N";
+    font-size:20px;
+}
+#endTable tbody tr th:nth-child(3):after {
+    content:"S";
+    font-size:20px;
+}
+#endTable tbody tr th:nth-child(4):after {
+    content:"K";
+    font-size:20px;
+}
+#endTable tbody tr th:nth-child(5):after {
+    content:"D";
+    font-size:20px;
+}
+#endTable tbody tr th:nth-child(6):after {
+    content:"O";
+    font-size:20px;
+}
+#endTable tbody tr th:nth-child(7):after {
+    content:"Dmg";
+    font-size:20px;
+}
+#endTable tbody tr th:nth-child(8):after {
+    content:"Rew";
+    font-size:20px;
+}
+
+.material-icons[style="color:rgb(255, 75, 66)!important;"]{
+    display: none!Important
+}
+
+/*Customization*/
+
+#menuClassContainer {
+    transform: unset;
+}
+
+#menuClassNameTag {
+    display: none;
+}
+
+#bubbleContainer {
+    display: none;
+}
+
+#menuClassName, #menuClassSubtext {
+    text-shadow: none;
+}
+
+#menuClassName {
+    font-size: 28px;
+}
+
+#menuClassSubtext {
+    color: var(--accent);
+}
+
+#customizeButton {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    right: 80px;
+    bottom: 50%;
+    transform: translateY(75%);
+    font-size: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+#customizeButton .material-icons {
+    display: none;
+}
+
+/* Container Text*/
+
+#menuClassName{
+    display: none
+}
+
+#menuClassSubtext{
+    margin-bottom: 120px;
+    transform: translateY(140px);
+    opacity: 0;
+    font-size: 22px;
+    transition: all 0.4s!Important;
+}
+
+#classPreviewCanvas {
+    opacity: 0;
+    transition: all 400ms!Important;
+}
+
+#menuClassContainer:hover>#classPreviewCanvas {
+    opacity: 1;
+}
+
+#menuClassContainer:hover>#menuClassSubtext{
+    opacity: 1;
+}
+
+#menuClassContainer:before{
+    content:'Customize';
+    display: block;
+    font-size: 24px;
+    color: white;
+    transform: translateY(390px);
+    transition: all 100ms!Important;
+}
+
+#menuClassContainer:hover:before{
+    color: #fff !important;
+}
+
+#pretendHider {
+    display: none !important;
+}
+
+.shopCard{
+   transition: font-size 0.25s ease; 
+   text-align: start; 
+   font-size: 0px;
+   border-radius: 9px;
+}
+
+.shopCard:hover{
+    font-size: 22px;
+}
+
+.shopCard:hover .spinVal{
+    font-size: 18px;
+}
+
+.spinVal{
+    text-align: start;
+    font-size: 0px;
+    background: transparent;
+    position: absolute;
+    bottom: -80px;
+    text-indent: 5px;
+    transition-duration: 0.25s;
+}
+
+#curGameInfo {
+    display: flex !important;
+    visibility: hidden !important;
+}
+#curGameInfo::before {
+    visibility: visible;
+    content: 'Benitto's Client'
+}
+.button, .button:hover { 
+    border: hidden ! important;
+
+#termsInfo::before {
+    content: 'CSS by Arch#0604';
+    font-size: 18px;
+    margin-right: 0;
+    padding-right: 0;
+    color: rgba(255, 255, 255, .5);
+}
